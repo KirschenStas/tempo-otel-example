@@ -106,7 +106,7 @@ func initTracer() func() {
 
 	driver := otlpgrpc.NewDriver(
 		otlpgrpc.WithInsecure(),
-		otlpgrpc.WithEndpoint("tempo:55680"),
+		otlpgrpc.WithEndpoint("tempo:4317"),
 		otlpgrpc.WithDialOption(grpc.WithBlock()), // useful for testing
 	)
 	exp, err := otlp.NewExporter(ctx, driver)
